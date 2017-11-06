@@ -1,13 +1,11 @@
-spring:
-  application:
-    name: consul-request-service
-  cloud:
-      consul:
-         host: 172.17.0.2
-         port: 8500
-         discovery:
-            register: false
-
 server:
    port: 8080
-
+spring:
+  application:
+    name: consul-request-service          #Necesario para sobreescribir el nombre por defecto que asigna Consul 
+  cloud:
+      consul:                       
+         host: 172.17.0.2                 #Nombre de host del agente Consul     
+         port: 8500                       #Puerto del agente Consul
+         discovery:
+            register: false
